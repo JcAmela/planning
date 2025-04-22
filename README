@@ -1,4 +1,4 @@
-# Planning CCT Can Canyadó 🗕️
+# Planning CCT Can Canyadó 📅
 
 **Aplicación web local** para visualizar, buscar y gestionar el planning mensual de actividades del **Centre de Cultura Tradicional Can Canyadó**, directamente desde un archivo Excel ya preparado.
 
@@ -12,79 +12,66 @@
 
 ---
 
-## 💻 ¿Qué necesitas para usarla?
+## 💻 Requisitos
 
-1. Un **ordenador** (Windows o Mac).
-2. Tener instalado **Node.js** (sirve para que funcione la parte interna del sistema).
-
----
-
-## 🛠️ ¿Cómo se pone en marcha?
-
-### 1. Instala Node.js
-
-Ve a la web oficial:  
-📍 [https://nodejs.org/](https://nodejs.org/)  
-Descarga la versión recomendada para tu sistema y sigue los pasos del instalador (siguiente → siguiente → finalizar).
+- Ordenador con **Windows** o **Mac**
+- Tener instalado **Node.js** → [https://nodejs.org/](https://nodejs.org/)
 
 ---
 
-### 2. Descarga el proyecto
+## 🚀 Instalación y uso
 
-1. Accede a:  
-   📍 [https://github.com/JcAmela/planning](https://github.com/JcAmela/planning)
-2. Haz clic en el botón verde **"Code"** y luego en **"Download ZIP"**.
-3. Descomprime la carpeta ZIP en tu ordenador.
+### 1. Descargar el proyecto
+
+```bash
+git clone https://github.com/JcAmela/planning.git
+cd planning
+```
 
 ---
 
-### 3. Instala el sistema (solo la primera vez)
+### 2. Instalar dependencias
 
-1. Abre la carpeta del proyecto descomprimido.
-2. Haz clic derecho sobre un espacio en blanco dentro de la carpeta y selecciona:  
-   **"Abrir en Terminal"** o **"Abrir en consola"**.
-3. Escribe este comando y pulsa **Enter**:
+Abre una terminal en la carpeta del proyecto y ejecuta:
 
 ```bash
 npm install
 ```
 
-Este paso instala las piezas necesarias para que el sistema funcione. Solo hay que hacerlo una vez.
-
 ---
 
-### 4. Arranca el sistema
+### 3. Ejecutar el servidor
 
-Una vez finalice la instalación, escribe en la misma terminal:
+En la misma terminal:
 
 ```bash
 npm start
 ```
 
-Verás un mensaje como este:
+Verás el mensaje:
 
-```
+```bash
 Servidor activo en http://localhost:3000
 ```
 
 ---
 
-### 5. Abre la interfaz
+### 4. Abrir la aplicación
 
-1. Ve a la carpeta **`frontend`** que está dentro del proyecto.
-2. Haz doble clic en el archivo `index.html` para abrirlo en tu navegador.
+Abre el archivo `index.html` ubicado dentro de la carpeta `/frontend` usando doble clic, o accede a:
 
-📅 Ya estás dentro del sistema. Puedes ver y filtrar las actividades.
+```
+http://localhost:3000
+```
 
-(Si no se abre bien, también puedes escribir en el navegador: `http://localhost:3000`)
+---
+
+## ✅ Funcionalidades
+
+- Visualización clara de actividades por día
+- Filtros por nombre, hora, sala o tipo de actividad
+- Lectura automática del Excel con estructura variable
+- Interfaz ligera, accesible y compatible con cualquier navegador
 
 ---
 
-## ✅ Funcionalidades principales
-
-- Visualización clara de actividades por **día**.
-- Filtros por **nombre**, **hora**, **sala** o **tipo de actividad**.
-- Lectura automática del archivo Excel.
-- Interfaz ligera, accesible y que funciona en cualquier navegador.
-
----
