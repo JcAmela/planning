@@ -23,7 +23,9 @@
 
 ### 1. Descargar el proyecto
 
-```bash
+Clona el repositorio desde GitHub y entra en la carpeta del proyecto:
+
+```
 git clone https://github.com/JcAmela/planning.git
 cd planning
 ```
@@ -32,25 +34,27 @@ cd planning
 
 ### 2. Instalar dependencias
 
-Abre una terminal en la carpeta del proyecto y ejecuta:
+Abre una terminal dentro de la carpeta del proyecto y escribe:
 
-```bash
+```
 npm install
 ```
+
+Este paso instala todo lo necesario para que funcione.
 
 ---
 
 ### 3. Ejecutar el servidor
 
-En la misma terminal:
+En la misma terminal, escribe:
 
-```bash
+```
 npm start
 ```
 
-Verás el mensaje:
+Deberías ver un mensaje como este:
 
-```bash
+```
 Servidor activo en http://localhost:3000
 ```
 
@@ -58,7 +62,9 @@ Servidor activo en http://localhost:3000
 
 ### 4. Abrir la aplicación
 
-Abre el archivo `index.html` ubicado dentro de la carpeta `/frontend` usando doble clic, o accede a:
+Abre el archivo `index.html` que está dentro de la carpeta `/frontend` haciendo doble clic.
+
+También puedes escribir en el navegador:
 
 ```
 http://localhost:3000
@@ -75,3 +81,4 @@ http://localhost:3000
 
 ---
 
+📖 ¿Quieres una guía ilustrada o en vídeo? Puedo prepararte un manual paso a paso para que cualquier compañero/a pueda utilizarla fácilmente. ¡Solo tienes que pedírmelo!
