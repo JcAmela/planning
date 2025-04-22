@@ -1,0 +1,40 @@
+# Planning CCT Can Canyadó 📅
+
+Aplicación web para visualizar, filtrar y gestionar el planning mensual de actividades del Centre de Cultura Tradicional Can Canyadó.
+
+## 🔧 Tecnologías
+
+- Backend: Node.js + Express
+- Frontend: HTML + CSS + Bootstrap + Vanilla JS
+- Lectura de Excel: `xlsx`
+- Interfaz responsiva, accesible y ligera
+
+## 🚀 Cómo usar
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/JcAmela/planning.git
+   cd planning
+Coloca tu archivo planning.xlsx en la raíz del proyecto.
+
+Instala las dependencias y ejecuta el servidor:
+
+bash
+Copiar
+Editar
+npm install
+npm start
+Abre el frontend en el navegador:
+
+arduino
+Copiar
+Editar
+http://localhost:3000
+✅ Funcionalidades
+Visualización de actividades por mes
+
+Filtro por día, hora, actividad o espacio
+
+Extracción inteligente desde hojas Excel con estructura variable
+
+Preparado para escalar con edición y exportación futura
