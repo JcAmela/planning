@@ -1,40 +1,90 @@
-# Planning CCT Can Canyadó 📅
+# Planning CCT Can Canyadó 🗕️
 
-Aplicación web para visualizar, filtrar y gestionar el planning mensual de actividades del Centre de Cultura Tradicional Can Canyadó.
+**Aplicación web local** para visualizar, buscar y gestionar el planning mensual de actividades del **Centre de Cultura Tradicional Can Canyadó**, directamente desde un archivo Excel ya preparado.
 
-## 🔧 Tecnologías
+---
 
-- Backend: Node.js + Express
-- Frontend: HTML + CSS + Bootstrap + Vanilla JS
-- Lectura de Excel: `xlsx`
-- Interfaz responsiva, accesible y ligera
+## 🧰 ¿Qué permite hacer?
 
-## 🚀 Cómo usar
+- Ver todas las actividades organizadas por **días, horas y espacios**.
+- Buscar por **nombre**, **sala**, **horario** o **día**.
+- Usar el Excel **tal como está**, sin necesidad de modificarlo.
 
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/JcAmela/planning.git
-   cd planning
-Coloca tu archivo planning.xlsx en la raíz del proyecto.
+---
 
-Instala las dependencias y ejecuta el servidor:
+## 💻 ¿Qué necesitas para usarla?
 
-bash
-Copiar
-Editar
+1. Un **ordenador** (Windows o Mac).
+2. Tener instalado **Node.js** (sirve para que funcione la parte interna del sistema).
+
+---
+
+## 🛠️ ¿Cómo se pone en marcha?
+
+### 1. Instala Node.js
+
+Ve a la web oficial:  
+📍 [https://nodejs.org/](https://nodejs.org/)  
+Descarga la versión recomendada para tu sistema y sigue los pasos del instalador (siguiente → siguiente → finalizar).
+
+---
+
+### 2. Descarga el proyecto
+
+1. Accede a:  
+   📍 [https://github.com/JcAmela/planning](https://github.com/JcAmela/planning)
+2. Haz clic en el botón verde **"Code"** y luego en **"Download ZIP"**.
+3. Descomprime la carpeta ZIP en tu ordenador.
+
+---
+
+### 3. Instala el sistema (solo la primera vez)
+
+1. Abre la carpeta del proyecto descomprimido.
+2. Haz clic derecho sobre un espacio en blanco dentro de la carpeta y selecciona:  
+   **"Abrir en Terminal"** o **"Abrir en consola"**.
+3. Escribe este comando y pulsa **Enter**:
+
+```bash
 npm install
+```
+
+Este paso instala las piezas necesarias para que el sistema funcione. Solo hay que hacerlo una vez.
+
+---
+
+### 4. Arranca el sistema
+
+Una vez finalice la instalación, escribe en la misma terminal:
+
+```bash
 npm start
-Abre el frontend en el navegador:
+```
 
-arduino
-Copiar
-Editar
-http://localhost:3000
-✅ Funcionalidades
-Visualización de actividades por mes
+Verás un mensaje como este:
 
-Filtro por día, hora, actividad o espacio
+```
+Servidor activo en http://localhost:3000
+```
 
-Extracción inteligente desde hojas Excel con estructura variable
+---
 
-Preparado para escalar con edición y exportación futura
+### 5. Abre la interfaz
+
+1. Ve a la carpeta **`frontend`** que está dentro del proyecto.
+2. Haz doble clic en el archivo `index.html` para abrirlo en tu navegador.
+
+📅 Ya estás dentro del sistema. Puedes ver y filtrar las actividades.
+
+(Si no se abre bien, también puedes escribir en el navegador: `http://localhost:3000`)
+
+---
+
+## ✅ Funcionalidades principales
+
+- Visualización clara de actividades por **día**.
+- Filtros por **nombre**, **hora**, **sala** o **tipo de actividad**.
+- Lectura automática del archivo Excel.
+- Interfaz ligera, accesible y que funciona en cualquier navegador.
+
+---

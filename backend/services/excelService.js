@@ -2,7 +2,7 @@ const xlsx = require('xlsx');
 const path = require('path');
 
 function getPlanningData(month) {
-  const filePath = path.join(__dirname, '../../planning.xlsx');
+  const filePath = path.join(__dirname, '../../planning.xls');
   const workbook = xlsx.readFile(filePath);
 
   if (!workbook.Sheets[month]) {
