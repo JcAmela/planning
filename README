@@ -1,29 +1,28 @@
-# Planning CCT Can Canyadó 📅
+# 📅 Planning CCT Can Canyadó
 
-**Aplicación web local** para visualizar, buscar y gestionar el planning mensual de actividades del **Centre de Cultura Tradicional Can Canyadó**, directamente desde un archivo Excel ya preparado.
-
----
-
-## 🧰 ¿Qué permite hacer?
-
-- Ver todas las actividades organizadas por **días, horas y espacios**.
-- Buscar por **nombre**, **sala**, **horario** o **día**.
-- Usar el Excel **tal como está**, sin necesidad de modificarlo.
+Bienvenido a la aplicación web del **Centre de Cultura Tradicional Can Canyadó**, diseñada para gestionar y visualizar el planning mensual de actividades de forma **intuitiva, rápida y accesible**.
 
 ---
 
-## 💻 Requisitos
+## ✨ ¿Qué puedes hacer con esta herramienta?
 
-- Ordenador con **Windows** o **Mac**
-- Tener instalado **Node.js** → [https://nodejs.org/](https://nodejs.org/)
+🔍 **Consultar actividades por día, hora y sala**  
+🎯 **Buscar por nombre de actividad, espacio o franja horaria**  
+🧠 **Lectura automática del Excel sin configuraciones**  
+📱 **Usarla desde cualquier navegador moderno**
 
 ---
 
-## 🚀 Instalación y uso
+## 🖥️ Requisitos mínimos
 
-### 1. Descargar el proyecto
+✔️ Ordenador con **Windows** o **Mac**  
+✔️ Tener instalado **Node.js** → [nodejs.org](https://nodejs.org/)
 
-Clona el repositorio desde GitHub y entra en la carpeta del proyecto:
+---
+
+## 🚀 Instalación rápida en 4 pasos
+
+### 🧩 Paso 1: Clona el proyecto
 
 ```
 git clone https://github.com/JcAmela/planning.git
@@ -32,27 +31,25 @@ cd planning
 
 ---
 
-### 2. Instalar dependencias
+### 📦 Paso 2: Instala las dependencias
 
-Abre una terminal dentro de la carpeta del proyecto y escribe:
+En una terminal abierta dentro de la carpeta del proyecto:
 
 ```
 npm install
 ```
 
-Este paso instala todo lo necesario para que funcione.
-
 ---
 
-### 3. Ejecutar el servidor
+### ⚙️ Paso 3: Inicia el servidor
 
-En la misma terminal, escribe:
+Ejecuta el siguiente comando en la terminal:
 
 ```
 npm start
 ```
 
-Deberías ver un mensaje como este:
+Verás algo como esto:
 
 ```
 Servidor activo en http://localhost:3000
@@ -60,11 +57,10 @@ Servidor activo en http://localhost:3000
 
 ---
 
-### 4. Abrir la aplicación
+### 🌐 Paso 4: Abre la interfaz web
 
-Abre el archivo `index.html` que está dentro de la carpeta `/frontend` haciendo doble clic.
-
-También puedes escribir en el navegador:
+📁 Entra en la carpeta `/frontend` y abre el archivo `index.html` con doble clic.  
+🌍 También puedes escribir esta dirección en el navegador:
 
 ```
 http://localhost:3000
@@ -72,13 +68,13 @@ http://localhost:3000
 
 ---
 
-## ✅ Funcionalidades
+## ✅ Funcionalidades clave
 
-- Visualización clara de actividades por día
-- Filtros por nombre, hora, sala o tipo de actividad
-- Lectura automática del Excel con estructura variable
-- Interfaz ligera, accesible y compatible con cualquier navegador
+- 🗓️ Visualización clara de actividades por día
+- 🔎 Filtros interactivos por actividad, sala, hora y tipo
+- 📊 Lectura inteligente del Excel mensual
+- 🖥️ Interfaz ligera, accesible y responsiva
 
 ---
 
-📖 ¿Quieres una guía ilustrada o en vídeo? Puedo prepararte un manual paso a paso para que cualquier compañero/a pueda utilizarla fácilmente. ¡Solo tienes que pedírmelo!
+
