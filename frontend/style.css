@@ -1,3 +1,91 @@
+/* === RESET GENERAL === */
 body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* === CONTENEDOR CENTRAL === */
+main {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* === BLOQUES DE DÍAS === */
+.day-block {
+  width: 100%;
+  background-color: #fff;
+  border-left: 5px solid #0d6efd;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+/* === CABECERA DEL DÍA === */
+.day-header {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #0d6efd;
+}
+
+/* === LISTADO DE ACTIVIDADES === */
+.activities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* === TARJETA DE ACTIVIDAD === */
+.activity-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #f8f9fa;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+/* === CONTENIDO IZQUIERDO DE ACTIVIDAD === */
+.activity-left {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+/* === ICONO DE ACTIVIDAD === */
+.activity-icon {
+  font-size: 1.3rem;
+}
+
+/* === NOMBRE DE ACTIVIDAD === */
+.activity-name {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* === ESPACIO DE ACTIVIDAD === */
+.activity-space {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+/* === HORA DE ACTIVIDAD === */
+.activity-hour {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #198754;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  white-space: nowrap;
 }

@@ -21,16 +21,51 @@ document.addEventListener("DOMContentLoaded", () => {
       tableBody.innerHTML = '<tr><td colspan="4">⚠️ Error carregant dades.</td></tr>';
     }
   }
+function renderTable(data) {
+  const container = document.getElementById("activitiesContainer");
+  container.innerHTML = '';
 
-  function renderTable(data) {
-    tableBody.innerHTML = data.map(row => `
-      <tr>
-        <td>${row.Dia}</td>
-        <td>${row.Hora}</td>
-        <td>${row.Activitat}</td>
-        <td>${row.Espai}</td>
-      </tr>`).join('');
-  }
+  const groupedByDay = data.reduce((acc, row) => {
+    acc[row.Dia] = acc[row.Dia] || [];
+    acc[row.Dia].push(row);
+    return acc;
+  }, {});
+
+  Object.keys(groupedByDay)
+  .sort((a, b) => {
+    // Extrae el número de día del texto, ej: "Dijous 16" => 16
+    const numA = parseInt(a.match(/\d+/)?.[0] || 0, 10);
+    const numB = parseInt(b.match(/\d+/)?.[0] || 0, 10);
+    return numA - numB;
+  })
+  .forEach(day => {
+    const activities = groupedByDay[day];
+    const dayBlock = document.createElement("div");
+    dayBlock.className = "day-block";
+
+    dayBlock.innerHTML = `
+      <div class="day-header">🗓️ ${day}</div>
+      <div class="activities-list">
+        ${activities.map(act => `
+          <div class="activity-card">
+            <div class="activity-left">
+              <div class="activity-icon">${getIcon(act.Activitat)}</div>
+              <div>
+                <div class="activity-name">${act.Activitat}</div>
+                <div class="activity-space">${act.Espai}</div>
+              </div>
+            </div>
+            <div class="activity-hour">${act.Hora}</div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    container.appendChild(dayBlock);
+  });
+}
+
+  
+  
 
   function filterTable(data) {
     const query = searchInput.value.toLowerCase();
@@ -46,3 +81,13 @@ document.addEventListener("DOMContentLoaded", () => {
   monthSelect.addEventListener("change", () => fetchData(monthSelect.value));
   fetchData(monthSelect.value);
 });
+
+function getIcon(activityName) {
+  const name = activityName.toLowerCase();
+  if (name.includes("pintura")) return "🎨";
+  if (name.includes("zumba")) return "💃";
+  if (name.includes("pilates")) return "🧘";
+  if (name.includes("escacs")) return "♟️";
+  if (name.includes("esgrima")) return "⚔️";
+  return "🎯"; // genérico
+}
