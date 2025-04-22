@@ -1,1 +1,17 @@
-node_modules
+# Node modules
+node_modules/
+
+# Archivos locales y temporales
+planning.xlsx
+*.log
+*.zip
+
+# Configuración de entorno
+.env
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración del editor
+.vscode/
