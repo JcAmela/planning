@@ -89,3 +89,21 @@ main {
   border-radius: 999px;
   white-space: nowrap;
 }
+/* === ESTILOS DE ESTADO DE DÍAS === */
+.day-past {
+  background-color: #e9ecef;
+  color: #adb5bd;
+  opacity: 0.7;
+  border-left: 5px solid #ced4da; /* Color más apagado */
+}
+
+.day-today {
+  background-color: #dbeafe;
+  border-left: 5px solid #0d6efd;
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.4);
+}
+.activity-now {
+  background-color: #ffeeba;
+  border: 2px solid #ffc107;
+  color: #856404;
+}
