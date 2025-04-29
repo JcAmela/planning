@@ -25,7 +25,6 @@ function renderizarActivitats(data, todayDate, mesSeleccionado) {
   
         const estado = compararFechaConHoy(fechaDelDia, todayDate);
   
-        // ✅ Solo aplicamos clases si el mes visible es el actual
         if (esMesActual && estado === "past") {
           bloque.classList.add("day-past");
         }
@@ -35,7 +34,7 @@ function renderizarActivitats(data, todayDate, mesSeleccionado) {
         }
   
         const cardsHTML = actividades.map(act => {
-          const esAhora = esMesActual && act.Hora?.startsWith(horaActual);
+          const esAhora = esMesActual && actividadEnCurso(act.Hora, horaActual);
           return `
             <div class="activity-card${esAhora ? ' activity-now' : ''}">
               <div class="activity-left">
@@ -58,18 +57,37 @@ function renderizarActivitats(data, todayDate, mesSeleccionado) {
         container.appendChild(bloque);
       });
   
-    // Scroll automático al día de hoy si existe
     if (bloqueDelDiaActual) {
       bloqueDelDiaActual.scrollIntoView({ behavior: 'auto', block: 'start' });
     }
   }
   
-  // Agrupar actividades por día
   function agruparPerDia(data) {
     return data.reduce((acc, act) => {
       acc[act.Dia] = acc[act.Dia] || [];
       acc[act.Dia].push(act);
       return acc;
     }, {});
+  }
+  
+  function actividadEnCurso(rangoHorario, horaActual) {
+    if (!rangoHorario || typeof rangoHorario !== 'string') return false;
+  
+    // Limpiar y separar
+    const limpio = rangoHorario.replace('h', '').trim(); // "10-13" o "10.30-13.00"
+    const [inicioStr, finStr] = limpio.split('-').map(s => s.trim());
+  
+    if (!inicioStr || !finStr) return false;
+  
+    const toMinutes = str => {
+      const [h, m = '00'] = str.split(/[.:]/);
+      return parseInt(h, 10) * 60 + parseInt(m, 10);
+    };
+  
+    const horaEnMin = toMinutes(horaActual);
+    const inicioEnMin = toMinutes(inicioStr);
+    const finEnMin = toMinutes(finStr);
+  
+    return horaEnMin >= inicioEnMin && horaEnMin <= finEnMin;
   }
   
