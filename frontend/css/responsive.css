@@ -1,0 +1,24 @@
+@media (max-width: 768px) {
+    #sidebar {
+      width: 80%;
+    }
+  
+    body.sidebar-open main {
+      margin-left: 80%;
+    }
+  
+    .day-header {
+      font-size: 1.25rem;
+    }
+  
+    .activity-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  
+    .activity-hour {
+      align-self: flex-end;
+    }
+  }
+  

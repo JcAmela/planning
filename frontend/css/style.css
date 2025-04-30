@@ -1,0 +1,250 @@
+/* === RESET GENERAL === */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+  color: #212529;
+  display: flex;
+  justify-content: center;
+}
+
+/* === CONTENIDO PRINCIPAL === */
+main {
+  width: 100%;
+  max-width: 1000px;
+  padding: 2rem 1rem 4rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+  color: #0d6efd;
+  font-weight: 700;
+}
+
+.lead {
+  font-size: 1.1rem;
+  color: #6c757d;
+}
+
+/* === BLOQUES DE DÍAS === */
+.day-block {
+  background-color: #ffffff;
+  border-left: 6px solid #0d6efd;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem 1.25rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.day-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0d6efd;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+
+/* === LISTADO DE ACTIVIDADES === */
+.activities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.activity-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+}
+
+.activity-card:hover {
+  background-color: #f8f9fa;
+  border-left: 4px solid #0d6efd;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.activity-left {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.activity-icon {
+  font-size: 1.8rem;
+}
+
+.activity-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: #212529;
+}
+
+.activity-space {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.activity-hour {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #198754;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* === ESTADOS DE DÍA === */
+.day-past {
+  background-color: #f1f3f5;
+  color: #adb5bd;
+  border-left: 6px solid #ced4da;
+}
+
+.day-today {
+  background-color: #e0f0ff;
+  border-left: 6px solid #0d6efd;
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.2);
+}
+
+.activity-now {
+  background-color: #fff3cd;
+  border: 2px solid #ffc107;
+  color: #856404;
+}
+
+/* === MENÚ LATERAL === */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 270px;
+  height: 100vh;
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.05);
+  padding: 2rem 1rem 1rem;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #dee2e6;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+#sidebar.open {
+  left: 0;
+}
+
+#sidebarToggle {
+  position: absolute;
+  top: 1rem;
+  right: -2.5rem;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s ease;
+}
+
+#sidebarToggle:hover {
+  background-color: #0b5ed7;
+}
+
+.sidebar-content {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar-content h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0d6efd;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-content label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #495057;
+}
+
+.sidebar-content select,
+.sidebar-content input,
+.sidebar-content button {
+  font-size: 1rem;
+}
+
+.sidebar-content input,
+.sidebar-content select {
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+}
+
+.sidebar-content button {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.sidebar-content button:hover {
+  opacity: 0.9;
+}
+
+body.sidebar-open main {
+  margin-left: 270px;
+  transition: margin-left 0.3s ease;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  #sidebar {
+    width: 80%;
+  }
+
+  body.sidebar-open main {
+    margin-left: 80%;
+  }
+
+  .day-header {
+    font-size: 1.25rem;
+  }
+
+  .activity-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .activity-hour {
+    align-self: flex-end;
+  }
+}

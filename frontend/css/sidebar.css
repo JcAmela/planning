@@ -1,0 +1,156 @@
+/* === MENÚ LATERAL === */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 280px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.08);
+    padding: 2rem 1.25rem 1.5rem;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transform: translateX(-100%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e9ecef;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  #sidebar.open {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  /* === BOTÓN TOGGLE SIEMPRE VISIBLE === */
+  #sidebarToggle {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2000;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    color: white;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, opacity 0.3s ease;
+  }
+  
+  #sidebarToggle:hover {
+    background-color: #0b5ed7;
+    transform: scale(1.05);
+  }
+  
+  .sidebar-content {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .sidebar-content h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0d6efd;
+    margin-bottom: 0.5rem;
+  }
+  
+  .sidebar-content label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 0.25rem;
+  }
+  
+  .sidebar-content select,
+  .sidebar-content input,
+  .sidebar-content button {
+    font-size: 1rem;
+  }
+  
+  .sidebar-content input,
+  .sidebar-content select {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    transition: border-color 0.2s ease;
+  }
+  
+  .sidebar-content input:focus,
+  .sidebar-content select:focus {
+    outline: none;
+    border-color: #0d6efd;
+    background-color: #ffffff;
+  }
+  
+  .sidebar-content button {
+    padding: 0.6rem 0.75rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .sidebar-content button:hover {
+    opacity: 0.95;
+    transform: scale(1.02);
+  }
+  
+  #sidebarRefresh {
+    background-color: #0d6efd;
+    color: white;
+  }
+  
+  #sidebarRefresh:hover {
+    background-color: #0b5ed7;
+  }
+  
+  #goToToday {
+    background-color: #f8f9fa;
+    color: #495057;
+    border: 1px solid #dee2e6;
+  }
+  
+  #goToToday:hover {
+    background-color: #e9ecef;
+  }
+  
+  /* Prevención de scroll horizontal */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* === CLICK FUERA PARA CERRAR === */
+  body.sidebar-open::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0);
+    z-index: 999;
+  }
+  
+  @media (max-width: 768px) {
+    #sidebar {
+      width: 80%;
+    }
+  }
