@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vista semanal</title>
+  <link rel="stylesheet" href="css/weekly.css">
+</head>
+<body>
+  <main>
+    <h1>Agenda semanal</h1>
+    <div id="weekContainer" class="week"></div>
+  </main>
+  <script src="js/weekly.js"></script>
+  <script>
+    const actividades = [
+      {"Dia": "Lunes 1", "Hora": "10:00", "Activitat": "Ioga", "Espai": "Sala 1", "Organitza": "Centre Cívic"},
+      {"Dia": "Martes 2", "Hora": "11:00", "Activitat": "Pintura", "Espai": "Sala 2", "Organitza": "Associació Veïnal"},
+      {"Dia": "Jueves 4", "Hora": "18:30", "Activitat": "Teatre", "Espai": "Sala 1", "Organitza": "Grup Local"}
+    ];
+    pintarSemana(actividades);
+  </script>
+</body>
+</html>
