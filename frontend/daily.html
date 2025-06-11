@@ -17,36 +17,26 @@
     </div>
     <div id="dayContainer" class="activities-list"></div>
   </main>
-
-  <script src="js/cargarDatos.js"></script>
-  <script src="js/gestionarFechas.js"></script>
   <script src="js/daily.js"></script>
   <script>
-    let actividades = [];
-    let dias = [];
+    const actividades = [
+      {"Dia": "Lunes 1", "Hora": "09:00", "Activitat": "Yoga", "Espai": "Sala 1", "Organitza": "Centro Cívico"},
+      {"Dia": "Lunes 1", "Hora": "11:00", "Activitat": "Pintura", "Espai": "Sala 2", "Organitza": "Asociación Vecinal"},
+      {"Dia": "Martes 2", "Hora": "10:00", "Activitat": "Taichí", "Espai": "Sala 1", "Organitza": "Club Esportiu"},
+      {"Dia": "Miércoles 3", "Hora": "17:00", "Activitat": "Teatro", "Espai": "Sala 3", "Organitza": "Grupo Local"}
+    ];
+
+    const dias = [...new Set(actividades.map(a => a.Dia))];
     const select = document.getElementById('daySelect');
+    dias.forEach(d => {
+      const opt = document.createElement('option');
+      opt.value = d;
+      opt.textContent = d;
+      select.appendChild(opt);
+    });
+
     let indice = 0;
 
-    async function cargarDatos() {
-      const mesActual = obtenerMesActual();
-      try {
-        actividades = await fetchData(mesActual);
-        dias = [...new Set(actividades.map(a => a.Dia))];
-
-        select.innerHTML = '';
-        dias.forEach(d => {
-          const opt = document.createElement('option');
-          opt.value = d;
-          opt.textContent = d;
-          select.appendChild(opt);
-        });
-
-        indice = 0;
-        actualizar();
-      } catch (err) {
-        console.error('Error cargando datos:', err);
-      }
-    }
 
     function actualizar() {
       const dia = dias[indice];
@@ -68,8 +58,6 @@
       indice = (indice + 1) % dias.length;
       actualizar();
     });
-
-    cargarDatos();
   </script>
 </body>
 </html>

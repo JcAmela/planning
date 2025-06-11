@@ -11,14 +11,6 @@
     <h1>Agenda semanal</h1>
     <div id="weekContainer" class="week"></div>
   </main>
-  <script src="js/cargarDatos.js"></script>
-  <script src="js/gestionarFechas.js"></script>
-  <script src="js/weekly.js"></script>
-  <script>
-    const mesActual = obtenerMesActual();
-    fetchData(mesActual)
-      .then(data => pintarSemana(data))
-      .catch(err => console.error('Error cargando datos:', err));
   </script>
 </body>
 </html>
