@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="css/days.css">
   <link rel="stylesheet" href="css/activity-card.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/daily.css">
+  <link rel="stylesheet" href="css/weekly.css">
 </head>
 <body>
 
@@ -50,18 +52,32 @@
     <header class="text-center my-4">
       <h1 class="mb-2">🗓️ Agenda d'activitats</h1>
       <p class="lead text-muted">Centre Cívic i Cultural Can Cañadó</p>
+      <div class="btn-group mt-3" role="group" aria-label="Canviar vista">
+        <button id="btnDaily" class="btn btn-outline-primary">Diària</button>
+        <button id="btnWeekly" class="btn btn-outline-primary">Setmanal</button>
+        <button id="btnMonthly" class="btn btn-outline-primary">Mensual</button>
+      </div>
     </header>
 
-    <section id="activitiesContainer" class="d-flex flex-column gap-3 px-2 px-md-4"></section>
+    <section id="dailyView" class="d-none">
+      <div class="day-nav mb-3">
+        <button id="prevDay" aria-label="Dia anterior">◀</button>
+        <select id="daySelect" aria-label="Seleccionar dia"></select>
+        <button id="nextDay" aria-label="Dia següent">▶</button>
+      </div>
+      <div id="dayContainer" class="activities-list"></div>
+    </section>
+
+    <section id="weeklyView" class="d-none">
+      <div id="weekContainer" class="week"></div>
+    </section>
+
+    <section id="monthlyView">
+      <section id="activitiesContainer" class="d-flex flex-column gap-3 px-2 px-md-4"></section>
+    </section>
   </main>
 
   <!-- Scripts -->
-  <script type="module" src="js/app.js"></script>
-  <script src="js/cargarDatos.js"></script>
-  <script src="js/gestionarFechas.js"></script>
-  <script src="js/iconosActividades.js"></script>
-  <script src="js/pintarActividades.js"></script>
-  <script src="js/devLlamada.js"></script>
-  <script type="module" src="js/sidebar.js"></script>
+  <script type="module" src="js/vistas.js"></script>
 </body>
 </html>
